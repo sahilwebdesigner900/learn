@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,8 @@
             --accent-red: #f48771;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             height: 100%;
         }
@@ -88,8 +90,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
         }
 
         .tabs-container {
@@ -221,8 +230,13 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         /* Breadcrumb */
@@ -353,13 +367,26 @@
             word-break: break-word;
         }
 
-        .code-keyword { color: var(--accent-purple); }
-        .code-string { color: var(--accent-orange); }
-        .code-comment { color: var(--text-tertiary); }
-        .code-function { color: var(--accent-yellow); }
+        .code-keyword {
+            color: var(--accent-purple);
+        }
+
+        .code-string {
+            color: var(--accent-orange);
+        }
+
+        .code-comment {
+            color: var(--text-tertiary);
+        }
+
+        .code-function {
+            color: var(--accent-yellow);
+        }
 
         /* Info Box */
-        .info-box, .warning-box, .success-box {
+        .info-box,
+        .warning-box,
+        .success-box {
             padding: 12px 16px;
             margin: 12px 0;
             border-radius: 4px;
@@ -387,7 +414,8 @@
         }
 
         /* List */
-        ul, ol {
+        ul,
+        ol {
             margin-left: 20px;
             margin: 8px 0 8px 20px;
         }
@@ -422,6 +450,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="editor-container">
         <!-- SIDEBAR -->
@@ -495,7 +524,8 @@
                 </ul>
             </div>
 
-            <div style="padding: 12px; border-top: 1px solid var(--border-color); margin-top: auto; font-size: 11px; color: var(--text-secondary); text-align: center;">
+            <div
+                style="padding: 12px; border-top: 1px solid var(--border-color); margin-top: auto; font-size: 11px; color: var(--text-secondary); text-align: center;">
                 v2.0 • Ultimate Notebook
             </div>
         </aside>
@@ -519,7 +549,8 @@
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Check Git version</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Check Git version</span>
 git --version
 
 <span class="code-comment"># Configure global user name</span>
@@ -535,7 +566,8 @@ git config --global core.editor "code --wait"
 git config --global -e
 
 <span class="code-comment"># List all configurations</span>
-git config --list</pre></div>
+git config --list</pre>
+                        </div>
                     </div>
 
                     <h2>📊 Check Status & View Logs</h2>
@@ -544,7 +576,8 @@ git config --list</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Check current status (verbose)</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Check current status (verbose)</span>
 git status
 
 <span class="code-comment"># Check status (short format)</span>
@@ -554,7 +587,8 @@ git status -s
 git log --oneline
 
 <span class="code-comment"># View commit history with graph</span>
-git log --oneline --graph</pre></div>
+git log --oneline --graph</pre>
+                        </div>
                     </div>
 
                     <h2>1️⃣ Clone & Directory Navigation</h2>
@@ -564,7 +598,8 @@ git log --oneline --graph</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Clone repository via HTTPS</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Clone repository via HTTPS</span>
 git clone &lt;https-link&gt;
 
 <span class="code-comment"># Change directory to project</span>
@@ -577,7 +612,8 @@ mkdir &lt;folder-name&gt;
 ls
 
 <span class="code-comment"># List all files (including hidden)</span>
-ls -a</pre></div>
+ls -a</pre>
+                        </div>
                     </div>
 
                     <h2>2️⃣ Git Initialization</h2>
@@ -587,7 +623,8 @@ ls -a</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Initialize a new repository</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Initialize a new repository</span>
 git init
 
 <span class="code-comment"># Add remote origin (link your repo)</span>
@@ -606,7 +643,8 @@ git branch -M main
 git push origin main
 
 <span class="code-comment"># Push with upstream tracking (one time)</span>
-git push -u origin main</pre></div>
+git push -u origin main</pre>
+                        </div>
                     </div>
 
                     <h2>3️⃣ File States in Git</h2>
@@ -631,14 +669,16 @@ git push -u origin main</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Add all files to staging area</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Add all files to staging area</span>
 git add .
 
 <span class="code-comment"># Add specific file</span>
 git add &lt;filename&gt;
 
 <span class="code-comment"># Commit with message</span>
-git commit -m "Your commit message"</pre></div>
+git commit -m "Your commit message"</pre>
+                        </div>
                     </div>
 
                     <h2>5️⃣ Push Command</h2>
@@ -648,11 +688,13 @@ git commit -m "Your commit message"</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Push to main branch</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Push to main branch</span>
 git push origin main
 
 <span class="code-comment"># Push with upstream (first time)</span>
-git push -u origin main</pre></div>
+git push -u origin main</pre>
+                        </div>
                     </div>
 
                     <h2>6️⃣ Git Branches</h2>
@@ -662,7 +704,8 @@ git push -u origin main</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Check current branch</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Check current branch</span>
 git branch
 
 <span class="code-comment"># Rename branch (e.g., master to main)</span>
@@ -681,7 +724,8 @@ git branch feature/navbar
 git switch &lt;branch-name&gt;
 
 <span class="code-comment"># Delete branch</span>
-git branch -d &lt;branch-name&gt;</pre></div>
+git branch -d &lt;branch-name&gt;</pre>
+                        </div>
                     </div>
 
                     <h2>7️⃣ Git Stash (Save Work in Progress)</h2>
@@ -691,14 +735,16 @@ git branch -d &lt;branch-name&gt;</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Stash current changes (save draft)</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Stash current changes (save draft)</span>
 git stash
 
 <span class="code-comment"># Apply stashed changes</span>
 git stash apply
 
 <span class="code-comment"># Clear all stashed changes</span>
-git stash clear</pre></div>
+git stash clear</pre>
+                        </div>
                     </div>
 
                     <h2>8️⃣ Merging Code</h2>
@@ -707,7 +753,8 @@ git stash clear</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Fetch new branches from remote</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Fetch new branches from remote</span>
 git fetch
 
 <span class="code-comment"># Compare two branches</span>
@@ -717,7 +764,8 @@ git diff &lt;branch-name&gt;
 git merge &lt;branch-name&gt;
 
 <span class="code-comment"># Push merged code to remote</span>
-git push origin main</pre></div>
+git push origin main</pre>
+                        </div>
                     </div>
 
                     <h2>9️⃣ Pull Command</h2>
@@ -727,8 +775,10 @@ git push origin main</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Pull latest changes from remote</span>
-git pull origin main</pre></div>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Pull latest changes from remote</span>
+git pull origin main</pre>
+                        </div>
                     </div>
 
                     <h2>🔟 Undoing Changes</h2>
@@ -737,14 +787,16 @@ git pull origin main</pre></div>
                             <div class="code-header-left"><span class="code-language">bash</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment"># Unstage specific file</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment"># Unstage specific file</span>
 git reset &lt;filename&gt;
 
 <span class="code-comment"># Undo last commit (keep changes)</span>
 git reset HEAD~1
 
 <span class="code-comment"># Hard reset - DELETE all changes (CAREFUL!)</span>
-git reset --hard HEAD~1</pre></div>
+git reset --hard HEAD~1</pre>
+                        </div>
                     </div>
 
                     <h2>🚀 GitHub Pages - Deploy Your Website</h2>
@@ -803,7 +855,8 @@ git reset --hard HEAD~1</pre></div>
                             <div class="code-header-left"><span class="code-language">javascript</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment">// Variables</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment">// Variables</span>
 let age = 25;
 const name = "John";
 
@@ -811,12 +864,14 @@ const name = "John";
 const add = (a, b) => a + b;
 
 <span class="code-comment">// Template Literals</span>
-console.log(`Hello ${name}`);</pre></div>
+console.log(`Hello ${name}`);</pre>
+                        </div>
                     </div>
 
                     <h2>📚 Resources</h2>
                     <ul>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN JavaScript</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN
+                                JavaScript</a></li>
                         <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a></li>
                     </ul>
                 </div>
@@ -861,10 +916,12 @@ console.log(`Hello ${name}`);</pre></div>
                             <div class="code-header-left"><span class="code-language">jsx</span></div>
                             <button class="copy-btn" onclick="copyCode(this)">COPY</button>
                         </div>
-                        <div class="code-body"><pre><span class="code-comment">// Functional Component</span>
+                        <div class="code-body">
+                            <pre><span class="code-comment">// Functional Component</span>
 function Greeting() {
   return &lt;h1&gt;Hello React!&lt;/h1&gt;;
-}</pre></div>
+}</pre>
+                        </div>
                     </div>
 
                     <h2>📚 Resources</h2>
@@ -996,12 +1053,56 @@ function Greeting() {
                         <li>Monitor performance with GMB Tracker</li>
                     </ol>
 
-                    <h2>📱 Directory Listings</h2>
+                    <h3>📱 Directory Listings </h3>
+
                     <ul>
-                        <li><a href="https://business.google.com/" target="_blank">Google Business Profile</a></li>
-                        <li><a href="https://www.justdial.com/" target="_blank">Justdial</a></li>
-                        <li><a href="https://www.sulekha.com/" target="_blank">Sulekha</a></li>
-                        <li><a href="https://biz.yelp.com/" target="_blank">Yelp</a></li>
+                        <li><a href="https://business.google.com/" target="_blank">Google Business Profile</a> (Primary
+                            for Google Search & Maps visibility)</li>
+                        <li><a href="https://www.linkedin.com/company/setup/" target="_blank">LinkedIn Company Page</a>
+                        </li>
+                        <li><a href="https://www.facebook.com/business" target="_blank">Facebook Business Page</a></li>
+                        <li><a href="https://foursquare.com/business" target="_blank">Foursquare Business Manager</a>
+                        </li>
+                        <li><a href="https://biz.yelp.com/" target="_blank">Yelp for Business</a></li>
+                        <li><a href="https://www.tripadvisor.com/" target="_blank">TripAdvisor</a> (Claim your listing)
+                        </li>
+                        <li><a href="https://www.trustpilot.com/" target="_blank">Trustpilot</a> (For reviews & profile)
+                        </li>
+                        <li><a href="https://www.crunchbase.com/" target="_blank">Crunchbase</a></li>
+                        <li><a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> (Edit/add via
+                            community tools)</li>
+                        <li><a href="https://www.manta.com/" target="_blank">Manta</a></li>
+                        <li><a href="https://www.bizcommunity.com/" target="_blank">BizCommunity</a></li>
+                        <li><a href="https://www.apsense.com/" target="_blank">APSense</a></li>
+                        <li><a href="https://biz.prlog.org/" target="_blank">PRLog Business Listings</a></li>
+                        <li><a href="https://www.sulekha.com/" target="_blank">Sulekha</a> (Popular in India for
+                            services)</li>
+                        <li><a href="https://www.tradeindia.com/" target="_blank">TradeIndia</a></li>
+                        <li><a href="https://www.sitejabber.com/" target="_blank">Sitejabber</a></li>
+                        <li><a href="https://www.dnb.com/" target="_blank">D&B (Dun & Bradstreet)</a></li>
+                        <li><a href="https://www.indiamart.com/" target="_blank">IndiaMART</a> (Strong B2B reach in
+                            India)</li>
+                        <li><a href="https://www.yellowpages.webindia123.com/" target="_blank">Yellow Pages India
+                                (WebIndia123)</a></li>
+                        <li><a href="https://www.mapsofindia.com/whitepages/" target="_blank">Maps of India White Pages
+                                / Business Directory</a></li>
+                        <li><a href="https://www.mouthshut.com/" target="_blank">MouthShut</a> (Indian review & listing
+                            site)</li>
+                        <li><a href="https://www.elocal.com/" target="_blank">eLocal</a> (Pro network for
+                            leads/listings)</li>
+                        <li><a href="https://www.storeboard.com/" target="_blank">Storeboard</a></li>
+                        <li><a href="https://www.justdial.com/" target="_blank">Justdial</a> (Very high visibility in
+                            India)</li>
+                        <li><a href="https://www.brownbook.net/" target="_blank">Brownbook</a></li>
+                        <li><a href="https://www.exportersindia.com/" target="_blank">ExportersIndia</a> (For
+                            exporters/suppliers)</li>
+                        <li><a href="https://www.cybo.com/" target="_blank">Cybo</a></li>
+                        <li><a href="https://www.lacartes.com/" target="_blank">Lacartes</a></li>
+                        <li><a href="https://www.indiacom.com/" target="_blank">Indiacom</a></li>
+                        <li><a href="https://www.callcontact.com/" target="_blank">CallContact</a></li>
+                        <li><a href="https://www.showmelocal.com/" target="_blank">ShowMeLocal</a></li>
+                        <li><a href="https://www.40billion.com/" target="_blank">40billion</a> (Business networking &
+                            listing)</li>
                     </ul>
                 </div>
             </div>
@@ -1025,18 +1126,18 @@ function Greeting() {
         const contentPanes = document.querySelectorAll('.content-pane');
 
         tabButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const tabId = this.getAttribute('data-tab');
-                
+
                 // Remove active from all buttons
                 tabButtons.forEach(btn => btn.classList.remove('active'));
-                
+
                 // Add active to clicked button
                 this.classList.add('active');
-                
+
                 // Hide all panes
                 contentPanes.forEach(pane => pane.classList.remove('active'));
-                
+
                 // Show selected pane
                 const selectedPane = document.getElementById(tabId);
                 if (selectedPane) {
@@ -1049,12 +1150,12 @@ function Greeting() {
         function copyCode(btn) {
             const codeBlock = btn.closest('.code-block');
             const code = codeBlock.querySelector('pre').textContent;
-            
+
             navigator.clipboard.writeText(code).then(() => {
                 const originalText = btn.textContent;
                 btn.textContent = '✓ COPIED';
                 btn.style.color = '#4ec9b0';
-                
+
                 setTimeout(() => {
                     btn.textContent = originalText;
                     btn.style.color = '';
@@ -1065,4 +1166,5 @@ function Greeting() {
         }
     </script>
 </body>
+
 </html>
