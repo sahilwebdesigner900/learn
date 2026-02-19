@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Ultimate Learning Notebook</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+   </head>
+<body>
+    <div class="editor-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">📚 Learning Hub</div>
+            </div>
+
+            <div class="tabs-container">
+                <ul class="tabs">
+                    <li class="tab-item">
+                        <button class="tab-btn active" data-tab="git">
+                            <span class="tab-icon">⚙️</span>
+                            Git & GitHub
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="js">
+                            <span class="tab-icon">⚡</span>
+                            JavaScript
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="wordpress">
+                            <span class="tab-icon">📱</span>
+                            WordPress
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="react">
+                            <span class="tab-icon">⚛️</span>
+                            React
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="nextjs">
+                            <span class="tab-icon">▲</span>
+                            Next.js
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="marketing">
+                            <span class="tab-icon">📊</span>
+                            Digital Marketing
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="google-ads">
+                            <span class="tab-icon">🔍</span>
+                            Google Ads
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="meta-ads">
+                            <span class="tab-icon">📱</span>
+                            Meta & FB Ads
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="ai">
+                            <span class="tab-icon">🤖</span>
+                            AI Tools
+                        </button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" data-tab="gmb">
+                            <span class="tab-icon">📍</span>
+                            GMB & SEO
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="padding: 12px; border-top: 1px solid var(--border-color); margin-top: auto; font-size: 11px; color: var(--text-secondary); text-align: center;">
+                v2.0 • Ultimate Notebook
+            </div>
+        </aside>
+
+        <!-- EDITOR AREA -->
+        <div class="editor-area">
+            <!-- Content -->
+            <div class="editor-content">
+                <!-- Git & GitHub Tab -->
+                <div class="content-pane active" id="git">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> git-github.md
+                    </div>
+                    <h1>⚙️ Git & GitHub Complete Master Guide</h1>
+                    <p>Master version control, collaboration, and deployment with Git and GitHub</p>
+
+                    <h2>🔧 Initial Configuration</h2>
+                    <p>Set up Git with your identity before your first commit:</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Check Git version</span>
+git --version
+
+<span class="code-comment"># Configure global user name</span>
+git config --global user.name "Your Name"
+
+<span class="code-comment"># Configure global email</span>
+git config --global user.email "your@email.com"
+
+<span class="code-comment"># Set default editor to VS Code</span>
+git config --global core.editor "code --wait"
+
+<span class="code-comment"># Edit all configurations</span>
+git config --global -e
+
+<span class="code-comment"># List all configurations</span>
+git config --list</pre></div>
+                    </div>
+
+                    <h2>📊 Check Status & View Logs</h2>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Check current status (verbose)</span>
+git status
+
+<span class="code-comment"># Check status (short format)</span>
+git status -s
+
+<span class="code-comment"># View commit history</span>
+git log --oneline
+
+<span class="code-comment"># View commit history with graph</span>
+git log --oneline --graph</pre></div>
+                    </div>
+
+                    <h2>1️⃣ Clone & Directory Navigation</h2>
+                    <p><strong>Clone:</strong> Cloning a repository to your local machine</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Clone repository via HTTPS</span>
+git clone &lt;https-link&gt;
+
+<span class="code-comment"># Change directory to project</span>
+cd &lt;project-name&gt;
+
+<span class="code-comment"># Create new directory</span>
+mkdir &lt;folder-name&gt;
+
+<span class="code-comment"># List files (visible)</span>
+ls
+
+<span class="code-comment"># List all files (including hidden)</span>
+ls -a</pre></div>
+                    </div>
+
+                    <h2>2️⃣ Git Initialization</h2>
+                    <p><strong>Init:</strong> Used to create a new Git repository in your project</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Initialize a new repository</span>
+git init
+
+<span class="code-comment"># Add remote origin (link your repo)</span>
+git remote add origin &lt;repo-link&gt;
+
+<span class="code-comment"># Verify remote is linked</span>
+git remote -v
+
+<span class="code-comment"># Check current branch</span>
+git branch
+
+<span class="code-comment"># Rename branch (master to main)</span>
+git branch -M main
+
+<span class="code-comment"># Push repository for first time</span>
+git push origin main
+
+<span class="code-comment"># Push with upstream tracking (one time)</span>
+git push -u origin main</pre></div>
+                    </div>
+
+                    <h2>3️⃣ File States in Git</h2>
+                    <div class="info-box">
+                        <strong>Untracked:</strong> New file that Git doesn't yet track
+                    </div>
+                    <div class="info-box">
+                        <strong>Modified:</strong> File has been changed but not staged
+                    </div>
+                    <div class="success-box">
+                        <strong>Staged:</strong> File is ready to be committed
+                    </div>
+                    <div class="info-box">
+                        <strong>Unmodified:</strong> File unchanged from last commit
+                    </div>
+
+                    <h2>4️⃣ Add & Commit Changes</h2>
+                    <p><strong>Add:</strong> Adds new or changed files from working directory to staging area</p>
+                    <p><strong>Commit:</strong> Record of change with a message</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Add all files to staging area</span>
+git add .
+
+<span class="code-comment"># Add specific file</span>
+git add &lt;filename&gt;
+
+<span class="code-comment"># Commit with message</span>
+git commit -m "Your commit message"</pre></div>
+                    </div>
+
+                    <h2>5️⃣ Push Command</h2>
+                    <p><strong>Push:</strong> Upload local repository content to remote repository</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Push to main branch</span>
+git push origin main
+
+<span class="code-comment"># Push with upstream (first time)</span>
+git push -u origin main</pre></div>
+                    </div>
+
+                    <h2>6️⃣ Git Branches</h2>
+                    <p><strong>Branches:</strong> Create separate development paths for features</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Check current branch</span>
+git branch
+
+<span class="code-comment"># Rename branch (e.g., master to main)</span>
+git branch -M main
+
+<span class="code-comment"># Navigate to existing branch</span>
+git checkout &lt;branch-name&gt;
+
+<span class="code-comment"># Create and switch to new branch</span>
+git checkout -b &lt;new-branch-name&gt;
+
+<span class="code-comment"># Example: Create feature branch</span>
+git branch feature/navbar
+
+<span class="code-comment"># Switch branch (modern method)</span>
+git switch &lt;branch-name&gt;
+
+<span class="code-comment"># Delete branch</span>
+git branch -d &lt;branch-name&gt;</pre></div>
+                    </div>
+
+                    <h2>7️⃣ Git Stash (Save Work in Progress)</h2>
+                    <p>Save changes temporarily without committing when switching branches:</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Stash current changes (save draft)</span>
+git stash
+
+<span class="code-comment"># Apply stashed changes</span>
+git stash apply
+
+<span class="code-comment"># Clear all stashed changes</span>
+git stash clear</pre></div>
+                    </div>
+
+                    <div class="info-box">
+                        When you have uncommitted changes and want to switch branches, Git won't allow it. Stash saves these changes in a draft state - they won't be deleted or added to any branch, but you can retrieve them later!
+                    </div>
+
+                    <h2>8️⃣ Merging Code</h2>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Fetch new branches from remote</span>
+git fetch
+
+<span class="code-comment"># Compare two branches</span>
+git diff &lt;branch-name&gt;
+
+<span class="code-comment"># Merge branch into current branch</span>
+git merge &lt;branch-name&gt;
+
+<span class="code-comment"># Push merged code to remote</span>
+git push origin main</pre></div>
+                    </div>
+
+                    <div class="warning-box">
+                        <strong>Pull Request (PR):</strong> Instead of merging directly, create a PR on GitHub to notify teammates about changes. This allows code review before merging to main!
+                    </div>
+
+                    <h2>9️⃣ Pull Command</h2>
+                    <p><strong>Pull:</strong> Fetch and download content from remote repo and update local repo</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Pull latest changes from remote</span>
+git pull origin main</pre></div>
+                    </div>
+
+                    <h2>🔟 Resolving Merge Conflicts</h2>
+                    <p>Merge conflicts occur when Git cannot automatically resolve differences in code between two commits. This usually happens when:</p>
+                    <ul>
+                        <li>Two branches modified the same lines</li>
+                        <li>One branch deleted a file another modified</li>
+                        <li>Both branches added conflicting changes</li>
+                    </ul>
+                    <p><strong>Solution:</strong> Manually edit the conflicted files and mark as resolved, then commit</p>
+
+                    <h2>1️⃣1️⃣ Undoing Changes</h2>
+                    <p>Go back to previous saved points and revert changes:</p>
+
+                    <h3>Case 1: Undo Staged Changes</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Unstage specific file</span>
+git reset &lt;filename&gt;
+
+<span class="code-comment"># Unstage all files</span>
+git reset</pre></div>
+                    </div>
+
+                    <h3>Case 2: Undo One Commit</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Undo last commit (keep changes)</span>
+git reset HEAD~1</pre></div>
+                    </div>
+
+                    <h3>Case 3: Undo Multiple Commits</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Reset to specific commit hash</span>
+git reset &lt;commit-hash&gt;
+
+<span class="code-comment"># Reset 2 commits back (mixed mode)</span>
+git reset -MIXED HEAD~2
+
+<span class="code-comment"># Hard reset - DELETE all changes (CAREFUL!)</span>
+git reset --hard HEAD~1</pre></div>
+                    </div>
+
+                    <h2>1️⃣2️⃣ Fork a Repository</h2>
+                    <p><strong>Fork:</strong> Create a new repository that shares code and visibility settings with the original "upstream" repository. It's a rough copy of the original repo that you own.</p>
+                    <div class="success-box">
+                        Perfect for contributing to open-source projects or working on someone else's code
+                    </div>
+
+                    <h2>🚀 GitHub Pages - Deploy Your Website</h2>
+                    <p>Host your website directly from GitHub - completely free!</p>
+
+                    <h3>Step-by-Step Deployment:</h3>
+                    <ol>
+                        <li>Create a new repository (use simple name for your project)</li>
+                        <li>Push your website files to the repository</li>
+                        <li>Go to repository <strong>Settings</strong></li>
+                        <li>Navigate to <strong>Code and automation → Pages</strong></li>
+                        <li>Under <strong>Build and Deployment</strong></li>
+                        <li>Select <strong>Deploy from a branch</strong></li>
+                        <li>Choose branch: <strong>Main or Master</strong> + <strong>root</strong> folder</li>
+                        <li>Click <strong>Save</strong></li>
+                        <li>✅ Your site is now live! GitHub will provide you a URL</li>
+                    </ol>
+
+                    <div class="success-box">
+                        Your website will be available at: <strong>https://yourusername.github.io/repository-name</strong>
+                    </div>
+
+                    <h2>📍 Google Business Profile - Local SEO</h2>
+                    <p>Rank higher in local search and Google Maps with these strategies:</p>
+
+                    <h3>✅ 10 Essential Steps to Rank in Local SEO</h3>
+
+                    <h3>1️⃣ Complete Business Information</h3>
+                    <p>Add all business details with strong, highly-searched keywords:</p>
+                    <ul>
+                        <li>Business name</li>
+                        <li>Complete address</li>
+                        <li>Phone number</li>
+                        <li>Detailed business description (with keywords)</li>
+                        <li>Website URL</li>
+                        <li>Business hours</li>
+                    </ul>
+
+                    <h3>2️⃣ Add Photos, Videos & Reviews</h3>
+                    <p>Increase engagement with visual content and customer feedback:</p>
+                    <ul>
+                        <li>Add 10+ high-quality photos</li>
+                        <li>Upload business videos</li>
+                        <li>Encourage customer reviews</li>
+                    </ul>
+
+                    <h3>3️⃣ Embed Keywords in Reviews</h3>
+                    <p>Guide customers to use location keywords in their reviews for better Google ranking</p>
+
+                    <h3>4️⃣ NAP Consistency (Most Important!)</h3>
+                    <div class="warning-box">
+                        <strong>NAP = Name, Address, Phone</strong><br>
+                        Keep NAP EXACTLY THE SAME across:<br>
+                        • Google Business Profile<br>
+                        • Your website<br>
+                        • All business directories<br>
+                        • LinkedIn, Facebook, social media<br>
+                        • Inconsistency = Lower rankings!
+                    </div>
+
+                    <h3>5️⃣ Keep GMB Active</h3>
+                    <ul>
+                        <li>Add at least 1 post per week</li>
+                        <li>Update photos regularly</li>
+                        <li>Respond to customer reviews</li>
+                        <li>Keep business hours updated</li>
+                    </ul>
+
+                    <h3>6️⃣ Geotagging (Nice to Have)</h3>
+                    <p>Add location tags to all your photos for better local SEO</p>
+
+                    <h3>7️⃣ Make Reviews Active</h3>
+                    <p>Respond to every review (positive and negative) professionally and promptly</p>
+
+                    <h3>8️⃣ Use GMB Everywhere Chrome Extension</h3>
+                    <p>View top 10 average data and check competitor keywords they're using</p>
+
+                    <h3>9️⃣ Add Products & Services</h3>
+                    <p>Create detailed product/service listings with images and descriptions in GMB</p>
+
+                    <h3>🔟 Use GMB Tracker</h3>
+                    <p>Monitor your GMB performance and rankings with tracking tools</p>
+
+                    <h2>📱 List Your Business on Multiple Platforms</h2>
+                    <p>Higher visibility across more directories = Better local SEO</p>
+
+                    <h3>Major Platforms:</h3>
+                    <ul>
+                        <li><a href="https://business.google.com/" target="_blank">Google Business Profile</a></li>
+                        <li><a href="https://www.linkedin.com/company/setup/" target="_blank">LinkedIn Company Page</a></li>
+                        <li><a href="https://www.facebook.com/business" target="_blank">Facebook Business Page</a></li>
+                        <li><a href="https://foursquare.com/business" target="_blank">Foursquare Business</a></li>
+                        <li><a href="https://biz.yelp.com/" target="_blank">Yelp Business</a></li>
+                        <li><a href="https://www.tripadvisor.com/" target="_blank">TripAdvisor</a></li>
+                        <li><a href="https://www.trustpilot.com/" target="_blank">Trustpilot</a></li>
+                        <li><a href="https://www.crunchbase.com/" target="_blank">Crunchbase</a></li>
+                        <li><a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a></li>
+                    </ul>
+
+                    <h3>India-Specific Directories:</h3>
+                    <ul>
+                        <li><a href="https://www.justdial.com/Free-Listing" target="_blank">Justdial (Free Listing)</a></li>
+                        <li><a href="https://www.indiamart.com/" target="_blank">IndiaMART</a></li>
+                        <li><a href="https://www.sulekha.com/" target="_blank">Sulekha</a></li>
+                        <li><a href="https://www.mouthshut.com/business" target="_blank">MouthShut (Free Listing)</a></li>
+                        <li><a href="https://www.elocal.com/" target="_blank">eLocal</a></li>
+                        <li><a href="https://www.brownbook.net/add-business" target="_blank">Brownbook</a></li>
+                        <li><a href="https://www.cybo.com/add-business/" target="_blank">Cybo</a></li>
+                        <li><a href="https://www.indiacom.com/" target="_blank">Indiacom</a></li>
+                        <li><a href="https://www.tradeindia.com/" target="_blank">TradeIndia</a></li>
+                        <li><a href="https://www.showmelocal.com/" target="_blank">ShowMeLocal</a></li>
+                    </ul>
+
+                    <div class="success-box">
+                        Listing on 20+ directories significantly improves your local SEO visibility and business credibility!
+                    </div>
+
+                    <h2>📚 Resources</h2>
+                    <p><strong>Git Official:</strong> <a href="https://git-scm.com/doc" target="_blank">git-scm.com/doc</a></p>
+                    <p><strong>GitHub Official:</strong> <a href="https://guides.github.com/" target="_blank">guides.github.com</a></p>
+                    <p><strong>GitHub Pages Docs:</strong> <a href="https://pages.github.com/" target="_blank">pages.github.com</a></p>
+                    <p><strong>GMB Official:</strong> <a href="https://business.google.com/" target="_blank">business.google.com</a></p>
+                </div>
+
+                <!-- JavaScript Tab -->
+                <div class="content-pane" id="js">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> javascript.md
+                    </div>
+                    <h1>⚡ JavaScript & ES6+ Complete Guide</h1>
+                    <p>Master modern JavaScript with ES6 features and beyond</p>
+
+                    <h2>🎯 ES6 Core Features</h2>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">javascript</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment">// Variables - let & const</span>
+let age = 25;
+const name = "John";
+
+<span class="code-comment">// Arrow Functions</span>
+const add = (a, b) => a + b;
+
+<span class="code-comment">// Template Literals</span>
+console.log(`Hello ${name}, you are ${age} years old`);
+
+<span class="code-comment">// Destructuring</span>
+const {name, age} = person;
+const [first, second] = array;</pre></div>
+                    </div>
+
+                    <h2>🔄 Functions & Promises</h2>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">javascript</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment">// Default Parameters</span>
+function greet(name = "Guest") {
+  return `Hello ${name}`;
+}
+
+<span class="code-comment">// Rest Parameters</span>
+function sum(...numbers) {
+  return numbers.reduce((a, b) => a + b);
+}
+
+<span class="code-comment">// Promise</span>
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done!"), 1000);
+});
+
+<span class="code-comment">// Async/Await</span>
+async function fetchData() {
+  const data = await fetch(url);
+  return data.json();
+}</pre></div>
+                    </div>
+
+                    <h2>📚 Learning Resources</h2>
+                    <p><strong>Official Resources:</strong></p>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN JavaScript Guide</a></li>
+                        <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a></li>
+                        <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools JavaScript</a></li>
+                    </ul>
+                    <p><strong>Advanced Learning:</strong></p>
+                    <ul>
+                        <li><a href="https://es6.io/" target="_blank">ES6 For Everyone</a></li>
+                        <li><a href="https://www.udemy.com/course/javascript-es6-tutorial/" target="_blank">Udemy ES6 Course</a></li>
+                        <li><a href="https://scrimba.com/learn/introtoes6" target="_blank">Scrimba ES6 Tutorial</a></li>
+                    </ul>
+                </div>
+
+                <!-- WordPress Tab -->
+                <div class="content-pane" id="wordpress">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> wordpress.md
+                    </div>
+                    <h1>📱 WordPress Complete Guide</h1>
+                    <p>Build websites with the world's most popular CMS</p>
+
+                    <h2>🚀 Getting Started</h2>
+                    <p><strong>What is WordPress?</strong> A free, open-source Content Management System that powers 40%+ of all websites</p>
+                    
+                    <h3>Installation Steps</h3>
+                    <ol>
+                        <li>Choose hosting provider (SiteGround, Bluehost, HostGator)</li>
+                        <li>Install WordPress through hosting control panel</li>
+                        <li>Login to WordPress Dashboard</li>
+                        <li>Choose a theme and customize</li>
+                        <li>Install plugins for additional features</li>
+                    </ol>
+
+                    <h2>📚 Core Concepts</h2>
+                    <p><strong>Posts:</strong> Blog content and articles</p>
+                    <p><strong>Pages:</strong> Static content like About, Contact</p>
+                    <p><strong>Themes:</strong> Pre-designed website templates</p>
+                    <p><strong>Plugins:</strong> Extend WordPress functionality</p>
+
+                    <h2>🔧 Essential Plugins</h2>
+                    <ul>
+                        <li><strong>Yoast SEO</strong> - Search engine optimization</li>
+                        <li><strong>WooCommerce</strong> - E-commerce functionality</li>
+                        <li><strong>Elementor</strong> - Page builder</li>
+                        <li><strong>Akismet</strong> - Spam protection</li>
+                        <li><strong>WPForms</strong> - Contact forms</li>
+                    </ul>
+
+                    <h2>📚 Official Resources</h2>
+                    <ul>
+                        <li><a href="https://learn.wordpress.org/" target="_blank">Learn WordPress Official</a></li>
+                        <li><a href="https://www.wpbeginner.com/" target="_blank">WP Beginner</a></li>
+                        <li><a href="https://wordpress.org/documentation/" target="_blank">WordPress.org Documentation</a></li>
+                    </ul>
+                </div>
+
+                <!-- React Tab -->
+                <div class="content-pane" id="react">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> react.md
+                    </div>
+                    <h1>⚛️ React Complete Tutorial</h1>
+                    <p>Build modern user interfaces with React's component-based architecture</p>
+
+                    <h2>🎯 React Fundamentals</h2>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">jsx</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment">// Functional Component</span>
+function Greeting() {
+  return &lt;h1&gt;Hello React!&lt;/h1&gt;;
+}
+
+<span class="code-comment">// Component with Props</span>
+function Card({ title, description }) {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;{title}&lt;/h2&gt;
+      &lt;p&gt;{description}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}</pre></div>
+                    </div>
+
+                    <h2>🎣 React Hooks</h2>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">jsx</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment">// useState</span>
+const [count, setCount] = useState(0);
+
+<span class="code-comment">// useEffect</span>
+useEffect(() => {
+  console.log("Component mounted");
+  return () => console.log("Cleanup");
+}, []);
+
+<span class="code-comment">// useContext</span>
+const theme = useContext(ThemeContext);</pre></div>
+                    </div>
+
+                    <h2>📚 Official React Documentation</h2>
+                    <ul>
+                        <li><a href="https://react.dev/" target="_blank">React.dev Official</a></li>
+                        <li><a href="https://www.w3schools.com/REACT/" target="_blank">W3Schools React</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/reactjs/" target="_blank">GeeksforGeeks React</a></li>
+                        <li><a href="https://react-tutorial.app/" target="_blank">Interactive React Tutorial</a></li>
+                    </ul>
+                </div>
+
+                <!-- Next.js Tab -->
+                <div class="content-pane" id="nextjs">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> nextjs.md
+                    </div>
+                    <h1>▲ Next.js Framework Guide</h1>
+                    <p>Build full-stack applications with React and Next.js</p>
+
+                    <h2>🚀 What is Next.js?</h2>
+                    <p>Next.js is a React framework that provides:</p>
+                    <ul>
+                        <li><strong>Server-Side Rendering (SSR)</strong> - Render pages on server</li>
+                        <li><strong>Static Site Generation (SSG)</strong> - Pre-render at build time</li>
+                        <li><strong>API Routes</strong> - Build backend without separate server</li>
+                        <li><strong>File-based Routing</strong> - Automatic route creation</li>
+                        <li><strong>Image Optimization</strong> - Automatic image optimization</li>
+                    </ul>
+
+                    <h2>📦 Project Setup</h2>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-header-left"><span class="code-language">bash</span></div>
+                            <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+                        </div>
+                        <div class="code-body"><pre><span class="code-comment"># Create Next.js app</span>
+npx create-next-app@latest my-app
+
+<span class="code-comment"># Navigate to project</span>
+cd my-app
+
+<span class="code-comment"># Run development server</span>
+npm run dev
+
+<span class="code-comment"># Build for production</span>
+npm run build
+
+<span class="code-comment"># Start production server</span>
+npm start</pre></div>
+                    </div>
+
+                    <h2>📚 Official Resources</h2>
+                    <ul>
+                        <li><a href="https://nextjs.org/" target="_blank">Next.js Official</a></li>
+                        <li><a href="https://nextjs.org/learn" target="_blank">Next.js Learn Course</a></li>
+                        <li><a href="https://nextjs.org/docs" target="_blank">Next.js Documentation</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/nextjs/" target="_blank">GeeksforGeeks Next.js</a></li>
+                    </ul>
+                </div>
+
+                <!-- Digital Marketing Tab -->
+                <div class="content-pane" id="marketing">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> digital-marketing.md
+                    </div>
+                    <h1>📊 Digital Marketing Complete Guide</h1>
+                    <p>Master digital marketing strategies and tactics</p>
+
+                    <h2>🎯 Core Digital Marketing Channels</h2>
+                    <ul>
+                        <li><strong>Search Engine Marketing (SEM)</strong> - Google Ads, Bing Ads</li>
+                        <li><strong>Social Media Marketing</strong> - Facebook, Instagram, LinkedIn, TikTok</li>
+                        <li><strong>Content Marketing</strong> - Blogs, videos, infographics</li>
+                        <li><strong>Email Marketing</strong> - Newsletter, campaigns</li>
+                        <li><strong>Influencer Marketing</strong> - Partner with creators</li>
+                        <li><strong>SEO (Search Engine Optimization)</strong> - Organic ranking</li>
+                    </ul>
+
+                    <h2>📈 Marketing Funnel</h2>
+                    <ol>
+                        <li><strong>Awareness:</strong> People discover your brand</li>
+                        <li><strong>Consideration:</strong> They learn about your products</li>
+                        <li><strong>Conversion:</strong> They make a purchase</li>
+                        <li><strong>Retention:</strong> Keep them as customers</li>
+                        <li><strong>Advocacy:</strong> They promote your brand</li>
+                    </ol>
+
+                    <h2>🔑 Key Metrics</h2>
+                    <ul>
+                        <li><strong>CTR (Click-Through Rate)</strong> - Percentage of people who click</li>
+                        <li><strong>CPC (Cost Per Click)</strong> - How much each click costs</li>
+                        <li><strong>ROI (Return on Investment)</strong> - Profit from ads</li>
+                        <li><strong>ROAS (Return on Ad Spend)</strong> - Revenue per dollar spent</li>
+                        <li><strong>CAC (Customer Acquisition Cost)</strong> - Cost to acquire customer</li>
+                        <li><strong>LTV (Lifetime Value)</strong> - Total value from customer</li>
+                    </ul>
+                </div>
+
+                <!-- Google Ads Tab -->
+                <div class="content-pane" id="google-ads">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> google-ads.md
+                    </div>
+                    <h1>🔍 Google Ads Complete Master Guide</h1>
+                    <p>Learn Google's powerful advertising platform for maximum ROI</p>
+
+                    <h2>📌 Campaign Types</h2>
+                    <p><strong>Search Ads:</strong> Text ads on Google search results</p>
+                    <p><strong>Display Ads:</strong> Visual ads on websites (Google Display Network)</p>
+                    <p><strong>Shopping Ads:</strong> Product ads with images and prices</p>
+                    <p><strong>Video Ads:</strong> YouTube and video partner networks</p>
+                    <p><strong>App Ads:</strong> Promote mobile applications</p>
+
+                    <h2>🎯 Keyword Research & Bidding</h2>
+                    <div class="info-box">
+                        <strong>Long-tail keywords:</strong> Less competition, more specific (3+ words)<br>
+                        <strong>Short-tail keywords:</strong> High volume, high competition<br>
+                        <strong>Bidding Strategies:</strong> Manual CPC, Target CPA, Maximize Conversions
+                    </div>
+
+                    <h2>💡 Ad Group Structure</h2>
+                    <ol>
+                        <li>Campaign (overarching goal)</li>
+                        <li>Ad Groups (related keywords)</li>
+                        <li>Keywords (search terms)</li>
+                        <li>Ads (landing pages)</li>
+                    </ol>
+
+                    <h2>📊 Quality Score</h2>
+                    <p>Google rates your ads 1-10 based on:</p>
+                    <ul>
+                        <li>Click-through rate (CTR)</li>
+                        <li>Ad relevance to keywords</li>
+                        <li>Landing page experience</li>
+                    </ul>
+
+                    <div class="success-box">
+                        <strong>Tip:</strong> Better Quality Score = Lower CPC & Better Ad Position
+                    </div>
+
+                    <h2>📚 Official Resources</h2>
+                    <ul>
+                        <li><a href="https://ads.google.com/" target="_blank">Google Ads Official</a></li>
+                        <li><a href="https://support.google.com/google-ads/" target="_blank">Google Ads Support</a></li>
+                        <li><a href="https://skillshop.withgoogle.com/" target="_blank">Google Skillshop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Meta Ads Tab -->
+                <div class="content-pane" id="meta-ads">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> meta-ads.md
+                    </div>
+                    <h1>📱 Meta & Facebook Ads Master Guide</h1>
+                    <p>Master Facebook and Instagram advertising with Meta Ads Manager</p>
+
+                    <h2>📊 Meta Ads Platform</h2>
+                    <p><strong>Reach:</strong> 3 billion+ monthly active users across:</p>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Messenger</li>
+                        <li>WhatsApp</li>
+                        <li>Threads</li>
+                        <li>Audience Network</li>
+                    </ul>
+
+                    <h2>🎯 Campaign Objectives</h2>
+                    <p><strong>Awareness:</strong> Maximize brand visibility and reach</p>
+                    <p><strong>Traffic:</strong> Drive clicks to your website</p>
+                    <p><strong>Engagement:</strong> Get likes, comments, shares on posts</p>
+                    <p><strong>Leads:</strong> Collect customer information via forms</p>
+                    <p><strong>Conversions:</strong> Drive sales and transactions</p>
+
+                    <h2>🏗️ Campaign Structure</h2>
+                    <ol>
+                        <li><strong>Campaign:</strong> Define main objective</li>
+                        <li><strong>Ad Set:</strong> Set audience, budget, schedule, placements</li>
+                        <li><strong>Ad:</strong> Create actual ad creative (images/videos/text)</li>
+                    </ol>
+
+                    <h2>👥 Audience Targeting</h2>
+                    <div class="info-box">
+                        <strong>Core Audiences:</strong> Demographics, interests, behaviors<br>
+                        <strong>Custom Audiences:</strong> Your existing customers (email, phone)<br>
+                        <strong>Lookalike Audiences:</strong> Similar to your best customers
+                    </div>
+
+                    <h2>💰 Budget & Bidding</h2>
+                    <ul>
+                        <li><strong>Daily Budget:</strong> Spend per day</li>
+                        <li><strong>Lifetime Budget:</strong> Total spend over campaign period</li>
+                        <li><strong>Bid Strategies:</strong> CPC, CPM, oCPM, Lifetime Value</li>
+                    </ul>
+
+                    <h2>📚 Official Resources</h2>
+                    <ul>
+                        <li><a href="https://www.facebook.com/business/" target="_blank">Meta Business</a></li>
+                        <li><a href="https://www.facebook.com/ads/manager/" target="_blank">Meta Ads Manager</a></li>
+                        <li><a href="https://www.coursera.org/learn/advertising-with-facebook" target="_blank">Coursera Meta Ads</a></li>
+                        <li><a href="https://www.udemy.com/course/mastering-facebook-ads-2024-meta-ads-beginner-to-expert/" target="_blank">Udemy Meta Ads</a></li>
+                    </ul>
+                </div>
+
+                <!-- AI Tools Tab -->
+                <div class="content-pane" id="ai">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> ai-tools.md
+                    </div>
+                    <h1>🤖 AI Tools Collection</h1>
+                    <p>Powerful AI tools to boost your productivity</p>
+
+                    <h2>🎨 Design & Presentation</h2>
+                    <ul>
+                        <li><strong>Gamma AI</strong> - Create presentations (gammaapp.com)</li>
+                        <li><strong>Napkin AI</strong> - Convert text to diagrams (napkin.ai)</li>
+                        <li><strong>Framer AI</strong> - Build websites (framer.com)</li>
+                        <li><strong>10web.io</strong> - Professional website builder</li>
+                    </ul>
+
+                    <h2>🖼️ Image Generation</h2>
+                    <ul>
+                        <li><strong>Midjourney</strong> - Premium AI art (midjourney.com)</li>
+                        <li><strong>Leonardo AI</strong> - Free image generation (leonardo.ai)</li>
+                        <li><strong>DreamStudio</strong> - Stable Diffusion based (dreamstudio.ai)</li>
+                    </ul>
+
+                    <h2>🎬 Video Creation</h2>
+                    <ul>
+                        <li><strong>Hailuo AI</strong> - AI video generation (hailuoai.video)</li>
+                        <li><strong>RunwayML</strong> - Video editing AI (runwayml.com)</li>
+                        <li><strong>Pika AI</strong> - Generative video (pika.ai)</li>
+                    </ul>
+
+                    <h2>🎵 Audio & Voice</h2>
+                    <ul>
+                        <li><strong>Suno.com</strong> - AI music generator</li>
+                        <li><strong>Eleven Labs</strong> - Professional voice synthesis</li>
+                    </ul>
+                </div>
+
+                <!-- GMB & SEO Tab -->
+                <div class="content-pane" id="gmb">
+                    <div class="breadcrumb">
+                        <span>~/learning</span> <span>/</span> gmb-seo.md
+                    </div>
+                    <h1>📍 Google Business Profile & Local SEO</h1>
+                    <p>Rank higher in local search results and Google Maps</p>
+
+                    <h2>✅ 10 Steps to Rank in Local SEO</h2>
+                    
+                    <h3>1. Complete Business Information</h3>
+                    <p>Add NAP (Name, Address, Phone) + description with keywords</p>
+
+                    <h3>2. Add Media & Reviews</h3>
+                    <p>Upload 10+ photos, videos, and encourage customer reviews</p>
+
+                    <h3>3. NAP Consistency</h3>
+                    <p>Keep business info identical across GMB, website, and directories</p>
+
+                    <h3>4. Post Regularly</h3>
+                    <p>Add 1-2 posts per week with location keywords</p>
+
+                    <h3>5. Respond to Reviews</h3>
+                    <p>Reply to all reviews (positive & negative) professionally</p>
+
+                    <h3>6. Add Products/Services</h3>
+                    <p>Create detailed listings with images and descriptions</p>
+
+                    <h3>7. Monitor Performance</h3>
+                    <p>Use GMB Tracker to track views, clicks, and directions</p>
+
+                    <h3>8. List on Multiple Platforms</h3>
+                    <p>Submit to Yelp, TripAdvisor, Foursquare, LinkedIn, etc.</p>
+
+                    <h3>9. Geotagging</h3>
+                    <p>Add location tags to all photos</p>
+
+                    <h3>10. Local Content</h3>
+                    <p>Create website content about your service area</p>
+
+                    <h2>📚 Official Resources</h2>
+                    <ul>
+                        <li><a href="https://business.google.com/" target="_blank">Google Business Profile</a></li>
+                        <li><a href="https://support.google.com/business/" target="_blank">Google Business Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <div class="status-item">
+                        <span>📚 Ultimate Learning Notebook v2.0</span>
+                    </div>
+                </div>
+                <div class="status-right">
+                    <div class="status-item">
+                        <span>UTF-8</span>
+                    </div>
+                    <div class="status-item">
+                        <span>Ln 1, Col 1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
